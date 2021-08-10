@@ -9,11 +9,14 @@
  box-sizing: border-box;
  font-family: 'Red Hat Display', sans-serif;
 }
-
+::selection{
+ background: hsl(245, 75%, 52%);
+ color: white;
+}
 .desktop-pattern{
  display: none;
 }
-.mobile-pattern{
+.pattern{
  width: 100vw;
  height: 60vh;
  position: absolute;
@@ -27,39 +30,204 @@
  background: hsl(225, 100%, 98%);
  height: 100vh;
 }
-.card .img{
- width: 100%;
-}
-.card{
- z-index: 10;
- background: hsl(225, 100%, 94%);
- position: absolute;
- width: 86vw;
- height: 80vh;
- margin-right: 7vw;
- margin-left: 7vw;
- margin-top: 10vh;
- margin-bottom: 10vh;
-}
 
 /* 🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵
    general & defaults end 
    🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵 */
-.attribution{
-  position: absolute;
-  bottom: 0px;
-  background:hsl(245, 75%, 52%);
-  color: hsl(224, 23%, 55%);
-  display: flex;
-  width: 100vw;
-  font-size: 10px !important;
-}
-.attribution a{
- color: hsl(225, 100%, 94%);
- text-decoration: none;
-}
-.about-me{
+
+   /* 🃏🃏🃏🃏🃏🃏🃏🃏🃏🃏
+          CARD START 
+   🃏🃏🃏🃏🃏🃏🃏🃏🃏🃏 */
+.card .img{
  width: 100%;
+ border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.card{
+ z-index: 10;
+ background: white;
+ position: absolute;
+ width: 86vw;
+ height: 90vh;
+ margin-right: 7vw;
+ margin-left: 7vw;
+ margin-top: 5vh;
+ margin-bottom: 5vh;
+ border-radius: 1rem;
+}
+   /* 🃏🃏🃏🃏🃏🃏🃏🃏🃏🃏
+           CARD END 
+   🃏🃏🃏🃏🃏🃏🃏🃏🃏🃏 */
+
+
+
+      /* 🎵🎵🎵🎵🎵🎵🎵
+         DESCRIPTION START 
+        🎵🎵🎵🎵🎵🎵🎵 */
+   .txt{
+ margin-top: 2rem;
+ text-align: center;
+ margin-bottom: 3rem;
+}
+
+.txt h1{
+ font-weight: 900;
+}
+
+.txt p{  
+  color: hsl(224, 23%, 55%);
+  padding:1.5rem;
+}
+
+.plan-card{
+ text-align: left;
+ display: flex;
+ align-items: center;
  justify-content: center;
-display: flex;
+ width: 90%;
+ margin:0 5%;
+ margin-top: 1rem;
+ background: rgb(240, 240, 240);
+ height: 5rem;
+ border-radius: 1rem;
+}
+.price{
+ position: relative;
+ padding: 0 !important;
+ align-self: flex-end;
+ position: relative;
+ right:10vw;
+ bottom: 15px;
+}
+pre{
+ position: relative;
+ left: 12px;
+ bottom: 5px;
+}
+.icon,.link{
+ position: relative;
+}
+
+.icon{
+ left: 10px;
+}
+
+.link{
+ right: 1rem;
+}
+/* 🔳 button 🔳 */
+.button{
+ width: 90%;
+ margin-left: 5%;
+ margin-right: 5%;
+ padding: 1rem;
+ position: relative;
+ bottom: 1rem;
+ border-radius: .7rem;
+ border: none;
+ background: hsl(245, 75%, 52%);
+ color: white;
+ box-shadow: 2px 2px 20px hsla(245, 75%, 52%, 0.507);
+ cursor: pointer;
+ transition: box-shadow .5s;
+}
+
+.button:hover{
+ box-shadow: 0px 0px 10px 1px hsl(245, 75%, 52%);
+}
+
+button:active{
+ transform: scale(.9);
+}
+
+.cancel{
+ display: flex;
+ justify-content: center;
+ color:hsl(224, 23%, 55%) ;
+ cursor: pointer;
+}
+
+.cancel:active{
+ color: hsl(245, 75%, 52%);
+}
+
+      /* 🎵🎵🎵🎵🎵🎵🎵
+         DESCRIPTION END 
+        🎵🎵🎵🎵🎵🎵🎵 */
+
+@media screen and (max-width:350px){
+ .plan-card{
+  flex-direction: column;
+  height: 100px;
+  background-color:#dfe6fb;
+ }
+ .icon{
+ left: 0;
+ bottom: 5px;
+}
+.button{
+ bottom: 40px;
+}
+.cancel{
+position: relative;
+bottom: 20px;
+}
+.link{
+ right: 0;
+ bottom: 10px;
+ margin-bottom: 20px;
+}
+pre{
+margin-right: 20px;
+margin-bottom: 6px;
+}
+}
+@media screen and (max-height:650px){
+.card{
+ height: 556px !important;
+}
+}
+@media screen and (max-width:196px){
+ .button{
+  font-size: 10px;
+  padding: 5px;
+ }
+}
+@media screen and (min-width:532px){
+ .img{
+  width: 457px;
+  height: 30vh;
+ }
+}
+@media screen and (min-width:800px){
+ .card{
+  width: 50vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
+ }
+ .price{
+  left: -50px;
+ }
+}
+@media screen and (min-width:1100px){
+ .card{
+  width: 30vw;
+  margin-left: 35vw;
+  margin-right: 35vw;
+ }
+ .price{
+  left: -50px;
+ }
+}
+@media screen and (min-height:800px){
+ .card{
+  height: 70vh;
+  margin-top: 34.5px;
+  margin-bottom: 34.5px;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+ }
+ .img{
+  height: 20vh;
+ }
 }
