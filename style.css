@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* 🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵
+   general & defaults start 
+   🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵 */
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Red Hat Display', sans-serif;
+}
+
+.desktop-pattern{
+ display: none;
+}
+.mobile-pattern{
+ width: 100vw;
+ height: 60vh;
+ position: absolute;
+ top: 0;
+ z-index: 1;
+}
+.🎵{
+ width: 100vw;
+ height: 100vw;
+ font-size: 16px;
+ background: hsl(225, 100%, 98%);
+ height: 100vh;
+}
+.card .img{
+ width: 100%;
+}
+.card{
+ z-index: 10;
+ background: hsl(225, 100%, 94%);
+ position: absolute;
+ width: 86vw;
+ height: 80vh;
+ margin-right: 7vw;
+ margin-left: 7vw;
+ margin-top: 10vh;
+ margin-bottom: 10vh;
+}
+
+/* 🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵
+   general & defaults end 
+   🎵🎵🎵🎵🎵🎵🎵🎵🎵🎵 */
+.attribution{
+  position: absolute;
+  bottom: 0px;
+  background:hsl(245, 75%, 52%);
+  color: hsl(224, 23%, 55%);
+  display: flex;
+  width: 100vw;
+  font-size: 10px !important;
+}
+.attribution a{
+ color: hsl(225, 100%, 94%);
+ text-decoration: none;
+}
+.about-me{
+ width: 100%;
+ justify-content: center;
+display: flex;
+}
